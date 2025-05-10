@@ -1,4 +1,5 @@
 # 📦 Imports
+from keep_alive import keep_alive
 import discord
 from discord.ext import commands, tasks
 import os
@@ -7,6 +8,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import asyncio
+
+keep_alive()  # Lance le serveur web
 
 # ⚙️ Configuration du bot
 intents = discord.Intents.default()
@@ -289,4 +292,4 @@ async def aide(ctx):
 
 
 # 🚀 Démarrage du bot (⚠️ Ne pas mettre le token ici en dur)
-bot.run("MTM3MDA2NTYwODMwOTM0MjI2MA.Grc-QF.oOSc0Zy5FESqox_VvxGTHSsCe5_1nwwsqYqkCI")  # Remplace par ton token via une variable d’environnement ou un fichier .env sécurisé
+bot.run(os.getenv("DISCORD_TOKEN"))
