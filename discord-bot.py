@@ -289,4 +289,4 @@ async def aide(ctx):
 
 
 # 🚀 Démarrage du bot (⚠️ Ne pas mettre le token ici en dur)
-bot.run("MTM3MDA2NTYwODMwOTM0MjI2MA.Grc-QF.oOSc0Zy5FESqox_VvxGTHSsCe5_1nwwsqYqkCI")  # Remplace par ton token via une variable d’environnement ou un fichier .env sécurisé
+bot.run(os.getenv("DISCORD_TOKEN"))
